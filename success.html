@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Successful</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .success-container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .success-container h2 {
+      color: #38a169;
+      margin-bottom: 20px;
+    }
+    .success-container p {
+      color: #4a5568;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+    }
+    .btn {
+      background: #667eea;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #5a67d8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="success-container">
+      <h2>🎉 Payment Successful!</h2>
+      <p>Your premium upgrade is being processed. You can now enjoy all premium features.</p>
+      <a href="index.html" class="btn">Back to Dashboard</a>
+    </div>
+  </div>
+
+  <script>
+    // Optional: clear cache so that when they go back, app.js re-checks premium
+    localStorage.setItem("refreshPremium", "true");
+  </script>
+</body>
+</html>

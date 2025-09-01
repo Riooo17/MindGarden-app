@@ -1,0 +1,44 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',sans-serif; background:linear-gradient(135deg,#667eea,#764ba2); min-height:100vh; display:flex; justify-content:center; align-items:center; padding:20px; }
+
+.container { background:white; border-radius:20px; padding:30px; box-shadow:0 10px 25px rgba(0,0,0,0.15); width:100%; max-width:700px; text-align:center; }
+.logo { font-size:2.2em; font-weight:bold; color:#4a5568; margin-bottom:5px; }
+.tagline { color:#718096; margin-bottom:25px; }
+
+.input-group { text-align:left; margin-bottom:15px; }
+.input-group label { display:block; margin-bottom:5px; color:#4a5568; }
+.input-group input { width:100%; padding:12px; border:2px solid #e2e8f0; border-radius:8px; }
+.input-group input:focus { border-color:#667eea; outline:none; }
+
+.btn { padding:12px; border-radius:8px; border:none; font-weight:600; cursor:pointer; transition:all 0.3s; }
+.btn-primary { background:#667eea; color:white; }
+.btn-primary:hover { background:#5a67d8; }
+.btn-secondary { background:#e2e8f0; color:#333; }
+.btn-secondary:hover { background:#cbd5e0; }
+
+.dashboard { display:flex; flex-direction:column; align-items:center; gap:25px; width:100%; max-width:800px; }
+
+.card { background:#f9fafc; padding:20px; border-radius:12px; width:100%; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+textarea { width:100%; min-height:120px; padding:12px; border-radius:10px; border:2px solid #e2e8f0; resize:vertical; }
+textarea:focus { border-color:#667eea; outline:none; }
+
+.mood-buttons { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin:10px 0; }
+.mood-btn { padding:8px 15px; border:2px solid #e2e8f0; border-radius:8px; background:white; cursor:pointer; }
+.mood-btn.active, .mood-btn:hover { background:#667eea; color:white; border-color:#667eea; }
+
+.entries-list { max-height:250px; overflow-y:auto; }
+.entry-card { background:white; padding:15px; border-radius:8px; margin-bottom:12px; border-left:4px solid #667eea; display:flex; justify-content:space-between; align-items:center; }
+.entry-card button { background:#fc8181; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; }
+.entry-card button:hover { background:#f56565; }
+
+.chart-row { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.chart-card canvas { max-width:280px; max-height:280px; }
+
+.quote-section { background:linear-gradient(135deg,#667eea,#764ba2); color:white; font-style:italic; padding:15px; border-radius:12px; width:100%; margin-bottom:20px; text-align:center; }
+
+.logout-btn { background:#fc8181; color:white; padding:12px; border:none; border-radius:10px; cursor:pointer; width:100%; }
+.logout-btn:hover { background:#f56565; }
+
+.grid-center { display:grid; place-items:center; gap:15px; }
+
+@media(max-width:600px) { .chart-card canvas { max-width:200px; max-height:200px; } }

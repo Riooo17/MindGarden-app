@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌱 MindGarden</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/@supabase/supabase-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Landing / Auth -->
+<div id="auth-section" class="container grid-center">
+  <div class="logo">🌱 MindGarden</div>
+  <div class="tagline">Grow your mind, track your moods, and thrive</div>
+
+  <div class="input-group">
+    <label for="display-name">Name</label>
+    <input type="text" id="display-name" placeholder="What should we call you?" />
+  </div>
+  <div class="input-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter email" />
+  </div>
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" />
+  </div>
+
+  <div class="button-group">
+    <button class="btn btn-primary" id="signup-btn">Sign Up</button>
+    <button class="btn btn-secondary" id="login-btn">Login</button>
+  </div>
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard" class="dashboard" style="display:none;">
+  <div class="quote-section">
+    <p id="daily-quote">Loading today's quote...</p>
+  </div>
+  <h2>Hello, <span id="user-name"></span></h2>
+
+  <div class="card journal-section">
+    <h3>📝 New Journal Entry</h3>
+    <textarea id="journal-entry" placeholder="Write your thoughts..."></textarea>
+    <div class="mood-rating">
+      <label>Select your mood:</label>
+      <div class="mood-buttons">
+        <button class="mood-btn" data-mood="😊">😊 Happy</button>
+        <button class="mood-btn" data-mood="😢">😢 Sad</button>
+        <button class="mood-btn" data-mood="😡">😡 Angry</button>
+        <button class="mood-btn" data-mood="😴">😴 Tired</button>
+        <button class="mood-btn" data-mood="🤩">🤩 Excited</button>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="save-entry">Save Entry</button>
+  </div>
+
+  <div class="card journal-history">
+    <h3>📖 Your Entries</h3>
+    <div class="filter-options">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="😊">😊 Happy</button>
+      <button class="filter-btn" data-filter="😢">😢 Sad</button>
+      <button class="filter-btn" data-filter="😡">😡 Angry</button>
+      <button class="filter-btn" data-filter="😴">😴 Tired</button>
+      <button class="filter-btn" data-filter="🤩">🤩 Excited</button>
+    </div>
+    <div class="entries-list" id="entries-list"></div>
+  </div>
+
+  <div class="analytics-section card">
+    <h3>📊 Mood Analytics</h3>
+    <div class="chart-row">
+      <div class="chart-card"><canvas id="moodChart"></canvas></div>
+      <div class="chart-card"><canvas id="calendarChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card premium-upgrade">
+    <h3>🌟 Upgrade to Premium</h3>
+    <button class="btn btn-primary" id="upgrade-btn">Upgrade – KES 1000</button>
+  </div>
+
+  <button class="logout-btn" id="logout-btn">Logout</button>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
