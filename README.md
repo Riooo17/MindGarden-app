@@ -1,10 +1,10 @@
-# 🌱 MindGarden
+ 🌱 MindGarden
 
 MindGarden is a **full-stack web app** for tracking moods, writing journals, viewing analytics, and upgrading to premium via Paystack. Users can log in, manage their entries, and see charts summarizing their mood trends.
 
 ---
 
-## Features
+ Features
 
 - **User Authentication**: Sign up, log in, log out with Supabase auth  
 - **Journal Management**: Add, view, and delete your own entries  
@@ -16,7 +16,7 @@ MindGarden is a **full-stack web app** for tracking moods, writing journals, vie
 
 ---
 
-## Folder Structure
+ Folder Structure
 
 mindgarden-app/
 ├─ backend/
@@ -31,13 +31,12 @@ mindgarden-app/
 └─ .gitignore
 
 yaml
-Copy code
 
 ---
 
-## Setup Instructions
+ Setup Instructions
 
-### 1. Backend
+ 1. Backend
 
 ```bash
 cd backend
@@ -84,3 +83,4 @@ Supabase for auth & database
 Chart.js for mood analytics
 
 Paystack for premium payments
+
